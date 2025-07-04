@@ -90,7 +90,7 @@ lib/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/indian-stocks-app.git
+   git clone https://github.com/Atharva-Werulkar/indian-stocks-app.git
    cd indian-stocks-app
    ```
 
@@ -273,9 +273,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## � Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/indian-stocks-app/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/indian-stocks-app/discussions)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/Atharva-Werulkar/indian-stocks-app/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Atharva-Werulkar/indian-stocks-app/discussions)
+- **Email**: werulkaratharva@gmail.com
 
 ---
 
@@ -283,6 +283,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ and Flutter**
 
-[⭐ Star this repository](https://github.com/yourusername/indian-stocks-app) if you found it helpful!
+[⭐ Star this repository](https://github.com/Atharva-Werulkar/indian-stocks-app) if you found it helpful!
 
 </div>
