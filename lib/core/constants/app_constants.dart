@@ -6,8 +6,15 @@ class ApiConstants {
   static const String baseUrl = 'https://api.twelvedata.com';
 
   // Get API key from environment variables or fallback to embedded key for demo
-  static String get apiKey =>
-      dotenv.env['TWELVE_DATA_API_KEY'] ?? 'ccb56c55d594460fb390386e63d93a83';
+  static String get apiKey {
+    try {
+      return dotenv.env['TWELVE_DATA_API_KEY'] ??
+          'ccb56c55d594460fb390386e63d93a83';
+    } catch (e) {
+      // Fallback if dotenv is not initialized
+      return 'ccb56c55d594460fb390386e63d93a83';
+    }
+  }
 
   // Endpoints
   static const String stocksEndpoint = '/stocks';
@@ -18,11 +25,37 @@ class ApiConstants {
 
 // App Configuration
 class AppConstants {
-  static String get appName => dotenv.env['APP_NAME'] ?? 'Indian Stocks';
-  static String get appVersion => dotenv.env['APP_VERSION'] ?? '1.0.0';
-  static bool get isDebug => dotenv.env['DEBUG_MODE']?.toLowerCase() == 'true';
-  static bool get enableLogging =>
-      dotenv.env['ENABLE_LOGGING']?.toLowerCase() == 'true';
+  static String get appName {
+    try {
+      return dotenv.env['APP_NAME'] ?? 'Indian Stocks';
+    } catch (e) {
+      return 'Indian Stocks';
+    }
+  }
+
+  static String get appVersion {
+    try {
+      return dotenv.env['APP_VERSION'] ?? '1.0.0';
+    } catch (e) {
+      return '1.0.0';
+    }
+  }
+
+  static bool get isDebug {
+    try {
+      return dotenv.env['DEBUG_MODE']?.toLowerCase() == 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  static bool get enableLogging {
+    try {
+      return dotenv.env['ENABLE_LOGGING']?.toLowerCase() == 'true';
+    } catch (e) {
+      return false;
+    }
+  }
 
   // Storage Keys
   static const String watchlistKey = 'watchlist';

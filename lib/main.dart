@@ -36,9 +36,13 @@ void main() async {
   PerformanceService.startOperation('AppInitialization');
 
   try {
-    // Load environment variables
-    await dotenv.load(fileName: ".env");
-    LoggingService.info('Environment variables loaded');
+    // Load environment variables (safely, file may not exist)
+    try {
+      await dotenv.load(fileName: ".env");
+      LoggingService.info('Environment variables loaded');
+    } catch (e) {
+      LoggingService.info('No .env file found, using default values');
+    }
 
     // Set preferred orientations
     await SystemChrome.setPreferredOrientations([
